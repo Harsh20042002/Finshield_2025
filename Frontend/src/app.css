@@ -1,0 +1,43 @@
+:root {
+  --purple: #6c63ff;
+  --purple-200: #d6d8ff;
+  --bg: #f6f7fb;
+  --text: #222;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin:0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+.container { max-width: 1080px; margin: 0 auto; padding: 24px 16px; }
+.card { background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(91,94,222,.08); padding: 20px; }
+h1 { margin: 0 0 16px; font-size: 28px; }
+h2 { margin: 0 0 8px; font-size: 20px; }
+.subtitle { color:#6c757d; font-size: 14px; margin-bottom: 18px; }
+
+/* Stepper */
+.stepper { display:flex; gap:8px; align-items:center; margin: 10px 0 22px; }
+.stepper .dot { width:28px; height:28px; border-radius:50%; border:2px solid var(--purple); display:flex; align-items:center; justify-content:center; font-weight:600; color:var(--purple); background:#fff; }
+.stepper .dot.active, .stepper .dot.done { background: var(--purple); color:#fff; }
+.stepper .bar { flex:1; height:2px; background: var(--purple-200); }
+
+/* Grid */
+.row { display:flex; flex-wrap:wrap; margin: 0 -8px; }
+.col { padding: 0 8px; margin-bottom: 12px; }
+.col-3 { width: 25%; } .col-4 { width: 33.33%; } .col-5 { width: 41.66%; } .col-6 { width: 50%; } .col-8 { width: 66.66%; } .col-12 { width: 100%; }
+@media (max-width: 900px){ .col-3,.col-4,.col-5,.col-6,.col-8 { width: 100%; } }
+
+label { display:block; font-size: 13px; margin-bottom:4px; }
+input, select { width: 100%; display:block; padding: 10px 12px; border-radius: 8px; border:1px solid #dcdfe5; outline: none; background: #fff; }
+input:focus, select:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(108,99,255,.12); }
+.help { font-size: 12px; color:#6c757d; margin-top: 4px; }
+
+/* Buttons */
+.actions { display:flex; justify-content: space-between; gap:10px; margin-top: 10px; }
+button { appearance:none; border:0; border-radius:10px; padding: 10px 16px; font-weight:600; cursor:pointer; }
+.btn { background: var(--purple); color:#fff; }
+.btn:disabled { opacity:.5; cursor:not-allowed; }
+.btn-outline { background:#fff; border:1px solid #dcdfe5; color:#333; }
+.btn-success { background: #2ebd59; color:#fff; }
+
+/* Errors */
+.error { color:#b00020; font-size: 12px; margin-top: 4px; }
+input.error, select.error { border-color: #b00020; box-shadow: 0 0 0 3px rgba(176,0,32,.12); }
